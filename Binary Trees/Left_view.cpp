@@ -1,18 +1,21 @@
-void solve(Node *root, int level, vector<int> &ans)
+void solve(Node *root, vector<int> &ans, int level)
 {
-    if (root == NULL)
+
+    if (!root)
         return;
 
     if (ans.size() == level)
         ans.push_back(root->data);
-    solve(root->left, level + 1, ans);
-    solve(root->right, level + 1, ans);
+
+    solve(root->left, ans, level++);
+    solve(root->right, ans, level++);
 }
 vector<int> leftView(Node *root)
 {
 
     vector<int> ans;
 
-    solve(root, 0, ans);
+    solve(root, ans, 0);
+
     return ans;
 }
