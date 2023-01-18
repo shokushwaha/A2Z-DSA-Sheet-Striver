@@ -29,7 +29,6 @@ bool DFS(vector<int> adj[], int src, int vis[], int parent[])
 }
 
 bool isCycle(int V, vector<int> adj[])
-{
 
     int parent[V];
 
