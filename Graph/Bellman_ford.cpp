@@ -16,7 +16,7 @@ int bellmenFord(int n, int m, int src, int dest, vector<vector<int>> &edges)
             int v = edges[j][1];
             int wt = edges[j][2];
 
-            if (dist[u] + wt < dist[v])
+            if (dist[u] != 1e9 && dist[u] + wt < dist[v])
                 dist[v] = dist[u] + wt;
         }
     }

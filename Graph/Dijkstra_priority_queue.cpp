@@ -16,7 +16,7 @@ vector<int> dijkshtra(int V, vector<vector<int>> adj[], int src)
     {
         int dist = pq.top().first;
         int node = pq.top().second;
-
+        pq.pop();
         for (auto it : adj[node])
         {
             int edgeWght = it[1];
