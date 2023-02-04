@@ -2,7 +2,6 @@
 vector<int> shortestPath(vector<int> adj[], int src, int V, int dest)
 {
     vector<int> ans;
-    stack<int> s;
     int vis[V] = {0};
     int parent{v} = {0};
     queue<int> q;
