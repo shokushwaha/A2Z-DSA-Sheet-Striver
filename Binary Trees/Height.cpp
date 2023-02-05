@@ -3,7 +3,11 @@ int solve(TreeNode *root)
     if (root == NULL)
         return 0;
 
-    return max(solve(root->left), solve(root->right)) + 1;
+    int left = solve(root->left);
+    int right = solve(root->right);
+
+    int ans = max(left, right) + 1;
+    return ans;
 }
 void height(TreeNode *root)
 {
