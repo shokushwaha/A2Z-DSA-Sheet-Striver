@@ -1,7 +1,5 @@
 void solve(Node *root, int k, int &count, vector<int> &temp)
-
 {
-
     if (!root)
         return;
 
