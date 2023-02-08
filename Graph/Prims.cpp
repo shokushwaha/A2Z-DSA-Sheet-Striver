@@ -1,8 +1,12 @@
 int spanningTree(int V, vector<vector<int>> adj[])
 {
+    // priotity queue storing pair in the form of {weight,node} in min heap
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 
+    // visited array to keep track of all the visited nodes
     vector<int> vis(V);
+
+    // pushing root in min heap
     pq.push({0, 0});
 
     vector<vector<int>> mst;
