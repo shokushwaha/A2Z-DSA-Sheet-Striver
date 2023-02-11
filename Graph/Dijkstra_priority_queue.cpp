@@ -19,8 +19,8 @@ vector<int> dijkshtra(int V, vector<vector<int>> adj[], int src)
         pq.pop();
         for (auto it : adj[node])
         {
-            int edgeWght = it[1];
             int adjNode = it[0];
+            int edgeWght = it[1];
 
             if (dist + edgeWght < dis[adjNode])
                 dis[adjNode] = dist + edgeWght;
