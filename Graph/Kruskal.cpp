@@ -43,8 +43,8 @@ void unionn(int u, int v, vector<int> parent, vector<int> rank)
 int main()
 {
     vector<node> edges;
-    int n = 6;
-    int m = 10;
+    int n = 3;
+    int m = 3;
     for (int i = 0; i < m; i++)
     {
         int a, b, c;
