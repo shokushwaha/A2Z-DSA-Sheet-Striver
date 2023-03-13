@@ -23,9 +23,11 @@ vector<int> dijkshtra(int V, vector<vector<int>> adj[], int src)
             int edgeWght = it[1];
 
             if (dist + edgeWght < dis[adjNode])
+            {
                 dis[adjNode] = dist + edgeWght;
 
-            pq.push({dis[adjNode], adjNode});
+                pq.push({dis[adjNode], adjNode});
+            }
         }
     }
     return dis;

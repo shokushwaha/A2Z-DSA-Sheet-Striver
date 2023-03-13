@@ -21,7 +21,7 @@ int bellmenFord(int n, int m, int src, int dest, vector<vector<int>> &edges)
         }
     }
 
-    // eheck for negative cycle
+    // check for negative cycle
     bool flag = false;
     for (int i = 0; i < m; i++)
     {
