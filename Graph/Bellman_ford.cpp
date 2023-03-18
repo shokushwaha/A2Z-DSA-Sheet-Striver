@@ -38,3 +38,6 @@ int bellmenFord(int n, int m, int src, int dest, vector<vector<int>> &edges)
 
     return -1;
 }
+
+// start with distance array initialized with infinity.Run the outer loop edges-1 times and traverse all edges and do the relaxation
+// to check negative weight cycle run the loop one more time and if the relaxation becomes true then the negative weight cycle is present

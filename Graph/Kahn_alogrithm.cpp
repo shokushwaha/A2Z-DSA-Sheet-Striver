@@ -28,3 +28,5 @@ vector<int> topoSort(int V, vector<int> adj[])
     }
     return ans;
 }
+
+// calculate indegree of all nodes then store the nodes whose indegree is equal to zero in a queue then iterate through all the nodes.During iteration first decrease indegree of node and if the indegree is equal to zero then push it in queue

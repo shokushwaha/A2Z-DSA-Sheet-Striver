@@ -77,3 +77,5 @@ int main()
 
     return 0;
 }
+
+// sort the edges in the form of their weights and start iterating through all the edges.If the parent of two nodes is not same then add the edge weight to the answer and push the two edge in answer vector and make their parent common

@@ -27,3 +27,5 @@ vector<int> topoSort(int V, vector<int> adj[])
     }
     return ans;
 }
+
+// do the normal dfs and while returning push the node in stack

@@ -36,3 +36,5 @@ int spanningTree(int V, vector<vector<int>> adj[])
     }
     return sum;
 }
+
+// start with creating a min heap and a visied array initialized with 0.Min heap in the form of pair {dist,node}.Then push {0,root} in min heap.While min heap is not empty,pop out the top element from the min heap and if it is visited then continue for the next iteration and if it is not visited mark it visited and add the weight to the answer and iterate through the adjacent nodes.If the adjacent nodes are non visited push  them in min heap and repeat till the min heap becomes empty

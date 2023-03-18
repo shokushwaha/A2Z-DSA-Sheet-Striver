@@ -67,3 +67,5 @@ int kosaraju(int V, vector<vector<int>> &adj)
 
     return scc;
 }
+
+// start with the topological sort of the edges of the graph and store it in the stack.Then reverse all the directions in the graph and then while stack becomes empty,pop out the top element and do dfs on it and count total number of strongly connected components

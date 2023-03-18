@@ -48,3 +48,6 @@ vector<vector<int>> criticalConnections(int n, vector<vector<int>> &connections)
 
     return bridges;
 }
+// low time stores lowest of insertion time of all adjacent nodes except parent
+
+// create three arrays tin to store the reach time of a node and low to store the lowest to reach a node and visited array initialized with 0.Then create a adjacency list from the given connections and call the dfs.In the dfs,mark the visited[node]=true and track a timer variable and set low[node]=tin[node]=timer and increase the timer.Then iterate through the adjacnet nodes of the node,if the adjacent node is parent itself then continue to the next iteration and if the adjacent node is not visited,call the dfs with adjacnetNode and the node as parent and set low[node]=min(low[node],low[it]) and if low[it]>tin[node] then bridge is present ie basically if the low time of the adjacent node is smaller than the tin of node then there is no bridge as we can reah it by other way

@@ -1,0 +1,16 @@
+1. dfs - done
+2. bfs - done
+3. cycle detection - undirected - done
+4. cycle detection - directed - done 
+5. topological sort - done 
+6. kahn's algorithm - done
+7. dijkshtra - done
+8. prims - done
+9. kruskal - done
+10. bellman ford - done
+11. kosaraju - strongly connected components - done
+12. tarjan - bridges in graph
+12. tarjan - articulation point
+13. shortest path - undirected - done
+14. negative weight - kahn and bellman ford - done
+15. disjoint set  

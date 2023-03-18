@@ -37,3 +37,5 @@ vector<int> shortestPath(vector<int> adj[], int src, int V, int dest)
 
     return ans;
 }
+
+// using bfs.Create a visited and parent array initialized with 0.Make a queue and mark the parent of souce node as -1 and visited source node=1.While the queue does not becomes empty,pop out the topNode and do the bfs.Iterate through the adjacent Nodes and if the adjacentNode is not visited then mark visited[adjacentNode]=1 and paren[adjacentNode]=topNode and push it in queue
