@@ -20,7 +20,10 @@
         "string_view": "cpp",
         "initializer_list": "cpp",
         "regex": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "chrono": "cpp",
+        "random": "cpp",
+        "limits": "cpp"
     },
     "workbench.sideBar.location": "left",
     "codetogether.virtualCursorJoin": "ownVirtualCursor"
