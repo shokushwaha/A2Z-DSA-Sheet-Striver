@@ -1,3 +1,4 @@
+// by changing data
 Node *segregate(Node *head)
 {
 
@@ -35,6 +36,54 @@ Node *segregate(Node *head)
         temp->data = 2;
         temp = temp->next;
     }
+
+    return head;
+}
+
+// by changing links
+void insertAtTail(Node *&head, Node *curr)
+{
+    tail->next = curr;
+    tail = curr;
+}
+Node *segregate(Node *head)
+{
+    Node *temp = head;
+    Node *zeroHead = new Node(-1);
+    Node *oneHead = new Node(-1);
+    Node *twoHead = new Node(-1);
+
+    Node *zeroTail = zeroHead;
+    Node *oneTail = oneHead;
+    Node *twoTail = twoHead;
+
+    while (temp)
+    {
+        int val = temp->data;
+
+        if (val == 0)
+            insertAtTail(zeroTail, val);
+        else if (val == 1)
+            insertAtTail(oneTail, val);
+        else if (val == 2)
+            insertAtTail(twoTail, val);
+
+        temp = temp->next;
+    }
+
+    if (oneHead->next != NULL)
+        zeroTail->next = oneHead->next;
+    else if (oneHead->next == NULL)
+        zeroTail->next = twoHead->next;
+
+    oneTail->next = twoHead->next;
+    twoTail->next = NULL;
+
+    head = zeroHead->next;
+
+    delete zeroHead;
+    delete oneHead;
+    delete twoHead;
 
     return head;
 }
