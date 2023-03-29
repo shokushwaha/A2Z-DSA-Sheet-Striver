@@ -1,6 +1,10 @@
 vector<int> bottomView(Node *root)
 {
+
+    // map : hd -> node
     map<int, int> mp;
+
+    // node -> hd
     queue<pair<Node *, int>> q;
     q.push({root, 0});
     vector<int> ans;

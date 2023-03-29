@@ -16,7 +16,6 @@ void leaf(Node *root, vector<int> &ans)
         return;
 
     if (root->left == NULL && root->right == NULL)
-
         ans.push_back(root->data);
 
     leaf(root->left, ans);
