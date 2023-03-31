@@ -1,23 +1,32 @@
-int index = 0;
-unordered_map<int, int> mp;
-TreeNode *solve(vector<int> &preorder, vector<int> &inorder, int lowerBound, int upperBound)
+int findPos(int n, int x, vector<int> arr)
 {
-    if (lowerBound > upperBound)
-        return NULL;
-    TreeNode *res = new TreeNode(preorder[index++]);
-    if (lowerBound == upperBound)
-        return res;
-    int mid = mp[res->val];
-    res->left = solve(preorder, inorder, lowerBound, mid - 1);
-    res->right = solve(preorder, inorder, mid + 1, upperBound);
-    return res;
+    for (int i = 0; i < n; i++)
+        if (arr[i] == x)
+            return i;
+
+    return -1;
 }
+
+TreeNode *solve(vector<int> &preorder, vector<int> &inorder, inr preOrderIndex, int inOrderStart, int inOrderEnd)
+{
+    if (preOrderIndex >= n || inOrderStart > inOrderEnd)
+        return NULL;
+
+    int element = preorder[preOrderIndex];
+    TreeNode *ans = new TreeNode(element);
+
+    int position = findPos(n, element, inorder);
+
+    ans->left = solve(preorder, inorder, preOrderIndex + 1, inOrderStart, pos - 1);
+    ans->right = solve(preoder, inorder, prerderIndex + 1, pos + 1, inOrderEnd);
+
+    return ans;
+}
+
 TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder)
 {
-    mp.clear();
-    for (int i = 0; i < inorder.size(); i++)
-    {
-        mp[inorder[i]] = i;
-    }
-    return solve(preorder, inorder, 0, inorder.size() - 1);
+    int preOrderIndex = 0;
+    int ans = inorder.size();
+    TreeNode *ans = solve(preorder, inorder, preOrderIndex, 0, n - 1);
+    return ans;
 }
