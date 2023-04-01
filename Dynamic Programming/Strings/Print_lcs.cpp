@@ -38,7 +38,7 @@ string lcs(string s1, string s2)
         }
         else
         {
-            if (str1[i - 1] > str2[j - 1])
+            if (dp1[i - 1] > dp[j - 1])
                 i--;
             else
                 j--;
